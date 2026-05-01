@@ -1,0 +1,8 @@
+*.json
+*.md
+!README.md
+__pycache__/
+*.pyc
+.env
+notes_*.png
+substack_story.md
