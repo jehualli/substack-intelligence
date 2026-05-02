@@ -1,68 +1,86 @@
 # Substack Intelligence Pipeline
 
-A multi-stage pipeline that scrapes a Substack author's notes, clusters them semantically using Claude, and generates a longform narrative profile.
+A multi-stage pipeline that scrapes a Substack author's notes, clusters them semantically, and generates a longform narrative profile.
 
 ## Pipeline
 
-```
-scrape_notes_api.py → substack_notes_api.json
-        ↓
-cluster_notes_llm.py → substack_clusters.json    (uses Claude Haiku)
-        ↓
-generate_story.py → substack_story.md             (uses Claude Sonnet)
-```
+```mermaid
+flowchart TD
+    A([Substack Profile]) -->|"reader/feed/profile API\nnextCursor pagination"| B[scrape_notes_api.py]
+    B --> C[(notes.json\n589 notes)]
 
-There's also `cluster_notes_sklearn.py` as an LDA-based alternative to the Claude clustering step (no API key needed).
+    C --> D{Clustering method}
+
+    D -->|"ANTHROPIC_API_KEY set"| E[cluster_notes_llm.py\nClaude Haiku]
+    D -->|"No API key needed"| F[cluster_notes_sklearn.py\nLDA / scikit-learn]
+
+    E --> G[(clusters.json)]
+    F --> G
+
+    G --> H[generate_story.py\nClaude Sonnet]
+    C --> H
+
+    H --> I([narrative profile\nstory.md])
+
+    J[find_scroll_api.py\nPlaywright] -->|"intercepts browser\nAPI calls"| A
+```
 
 ## Setup
 
-No external dependencies for the main pipeline — uses Python stdlib only.
-
 ```bash
-export ANTHROPIC_API_KEY=your_key_here
+# Required for scraping private profiles:
+export SUBSTACK_SESSION_COOKIE=your_substack_sid_cookie
 
-# For private profiles (get from browser DevTools → Application → Cookies → substack.sid):
-export SUBSTACK_SESSION_COOKIE=your_cookie_here
+# Required for Claude clustering and narrative generation:
+export ANTHROPIC_API_KEY=your_key_here
 ```
+
+Get `SUBSTACK_SESSION_COOKIE` from browser DevTools → Application → Cookies → `substack.com` → `substack.sid`.
 
 ## Usage
 
 ### 1. Scrape notes
 
 ```bash
-python scrape_notes_api.py <user_id>
+python scrape_notes_api.py <user_id> <output_file>
+# Example:
+python scrape_notes_api.py 273636371 notes.json
 ```
 
-The `user_id` is the numeric ID in the Substack reader API. You can find it by inspecting network requests on a profile's notes page, or by checking the URL pattern `substack.com/api/v1/reader/feed/profile/<user_id>`.
+Paginates through the full note history using the API's `nextCursor` field. The `user_id` is the numeric ID visible in the `reader/feed/profile/<user_id>` API path — inspect network requests on any profile's notes page to find it.
 
-Output: `substack_notes_api.json`
+Output: `notes.json`
 
-### 2. Cluster with Claude
+### 2a. Cluster with Claude (semantic)
 
 ```bash
-python cluster_notes_llm.py
+python cluster_notes_llm.py notes.json
 ```
 
-Calls Claude Haiku to identify 6-8 recurring topic clusters across all notes, returns structured JSON with engagement metrics per cluster.
+Sends all notes to Claude Haiku in a single prompt. Claude identifies 6-8 recurring topic clusters and returns structured JSON with engagement metrics per cluster.
 
-Output: `substack_clusters.json`
+Output: `clusters.json`
+
+### 2b. Cluster with LDA (no API key)
+
+```bash
+pip install scikit-learn numpy
+python cluster_notes_sklearn.py notes.json
+```
+
+Fits LDA topic models for n=5–10 topics, selects the best by perplexity elbow, and assigns each note to a cluster.
+
+Output: `clusters.json`
 
 ### 3. Generate narrative
 
 ```bash
-python generate_story.py
+python generate_story.py notes.json clusters.json
 ```
 
-Calls Claude Sonnet to write a 500-700 word analytical profile of the author based on clusters and top-performing notes.
+Passes cluster themes and top-engagement notes to Claude Sonnet. Returns a 500–700 word analytical profile of the author.
 
-Output: `substack_story.md`
-
-### Alternative: LDA clustering (no API key)
-
-```bash
-pip install scikit-learn numpy
-python cluster_notes_sklearn.py
-```
+Output: `story.md`
 
 ### API discovery tool
 
@@ -71,12 +89,12 @@ pip install playwright && playwright install chromium
 python find_scroll_api.py <substack_handle>
 ```
 
-Intercepts and logs all Substack API calls made during page load and scrolling — useful for reverse-engineering pagination.
+Launches a headless browser, loads the notes page, scrolls, and logs every API call intercepted — useful for reverse-engineering new endpoints or pagination formats.
 
 ## How it works
 
-**Scraping:** Substack doesn't expose a public API for notes. This pipeline reverse-engineers the private `reader/feed/profile` endpoint, reconstructing the base64-encoded cursor format (timestamp + entity key + pinned keys + page number) needed for pagination.
+**Scraping:** Substack's `reader/feed/profile` endpoint returns a `nextCursor` field with each response. The scraper follows that cursor page by page until it's absent, pulling the full history. Each page returns up to 25 items; notes appear as `type: "comment"` in the feed.
 
-**Clustering:** Rather than keyword matching, Claude reads all notes in a single prompt and identifies semantic themes — grouping posts by conceptual similarity rather than exact word overlap.
+**Clustering:** Claude reads all notes in one prompt and groups them by semantic theme — conceptual similarity rather than keyword overlap. The LDA alternative uses bag-of-words term frequency with an extended stopword list tuned for social/political text.
 
-**Narrative generation:** Claude Sonnet synthesizes cluster data and top-performing posts into a coherent analytical profile, surfacing patterns in what resonates vs. what falls flat with the audience.
+**Narrative generation:** Claude Sonnet receives the cluster map and top-performing notes (ranked by reactions), then writes an analytical profile surfacing what resonates with the audience, what falls flat, and what tensions exist in the author's worldview.
