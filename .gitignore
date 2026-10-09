@@ -6,3 +6,11 @@ __pycache__/
 .env
 notes_*.png
 substack_story.md
+
+.DS_Store
+_deprecated/
+node_modules/
+.next/
+!notes-viewer/package.json
+!notes-viewer/package-lock.json
+!notes-viewer/tsconfig.json

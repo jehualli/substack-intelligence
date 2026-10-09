@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Georgia, serif; background: #fff; color: #111; padding: 52px 64px; max-width: 820px; margin: 0 auto; line-height: 1.75; }
+
+  .cover { margin-bottom: 56px; padding-bottom: 32px; border-bottom: 3px solid #111; }
+  .cover h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 6px; }
+  .cover .sub { font-size: 13px; color: #777; font-style: italic; }
+  .cover .meta { font-size: 12px; color: #aaa; margin-top: 10px; }
+
+  .section-title { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; font-weight: 700; color: #aaa; margin-bottom: 16px; font-family: -apple-system, sans-serif; }
+
+  table { width: 100%; border-collapse: collapse; margin-bottom: 56px; font-family: -apple-system, sans-serif; font-size: 13px; }
+  th { text-align: left; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #777; border-bottom: 2px solid #111; padding: 8px 10px 8px 0; }
+  td { padding: 10px 10px 10px 0; border-bottom: 1px solid #ebebeb; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  .cluster-name { font-weight: 700; font-size: 13px; }
+  .cluster-desc { font-size: 12px; color: #666; margin-top: 3px; line-height: 1.5; }
+  .num { text-align: right; color: #333; font-variant-numeric: tabular-nums; font-family: -apple-system, sans-serif; }
+  .rank { color: #ccc; font-size: 12px; font-family: -apple-system, sans-serif; }
+
+  .cluster-block { margin-bottom: 48px; }
+  .cluster-header { border-top: 2px solid #111; padding-top: 14px; margin-bottom: 18px; }
+  .cluster-header h2 { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+  .cluster-header .ch-meta { font-size: 12px; color: #888; font-family: -apple-system, sans-serif; }
+  .cluster-header .ch-terms { font-size: 11px; color: #bbb; font-style: italic; margin-top: 4px; font-family: -apple-system, sans-serif; }
+
+  .note { display: flex; gap: 14px; margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid #f0f0f0; }
+  .note:last-child { border-bottom: none; }
+  .note-num { font-size: 18px; font-weight: 700; color: #ddd; min-width: 24px; line-height: 1.3; font-family: -apple-system, sans-serif; }
+  .note-inner { flex: 1; }
+  .note-meta { font-size: 11px; color: #aaa; margin-bottom: 5px; font-family: -apple-system, sans-serif; }
+  .note-meta strong { color: #444; }
+  .note-body { font-size: 13.5px; line-height: 1.7; color: #222; margin-bottom: 6px; }
+  a.note-link { font-size: 11px; color: #0055aa; text-decoration: none; font-family: -apple-system, sans-serif; word-break: break-all; }
+
+  .manifesto { margin-top: 64px; padding-top: 32px; border-top: 3px solid #111; }
+  .m-h1 { font-size: 22px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 4px; }
+  .msection { margin-bottom: 36px; margin-top: 24px; }
+  .msection h3 { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 700; border-bottom: 1px solid #111; padding-bottom: 7px; margin-bottom: 16px; font-family: -apple-system, sans-serif; }
+  .manifesto p { font-size: 14px; margin-bottom: 14px; }
+  .manifesto em { font-style: italic; color: #777; font-size: 13px; }
+  .manifesto hr { border: none; border-top: 1px solid #e0e0e0; margin: 28px 0; }
+
+  .page-break { page-break-before: always; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1>GLO — Complete Note Analysis</h1>
+  <p class="sub">All 2,669 original notes clustered across 7 themes</p>
+  <p class="meta">@thepillarsofwisdom &nbsp;·&nbsp; October 2024 – May 2026 &nbsp;·&nbsp; substack-intelligence pipeline</p>
+</div>
+
+<p class="section-title">Cluster Overview</p>
+<table>
+  <thead>
+    <tr>
+      <th style="width:30px"></th>
+      <th>Cluster</th>
+      <th class="num">Notes</th>
+      <th class="num">Avg ❤</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="rank">#1</td>
+      <td>
+        <div class="cluster-name">Women, Class & Liberals</div>
+        <div class="cluster-desc">Women, liberals, middle class decay, Prozac, smartphones, the death of casual approach.</div>
+      </td>
+      <td class="num">222</td>
+      <td class="num">21.4</td>
+    </tr>
+    <tr>
+      <td class="rank">#2</td>
+      <td>
+        <div class="cluster-name">Social Order & Masculinity</div>
+        <div class="cluster-desc">Money, inflation, affirmative action, counterfeit civil servants, old-growth wood, social media.</div>
+      </td>
+      <td class="num">82</td>
+      <td class="num">20.0</td>
+    </tr>
+    <tr>
+      <td class="rank">#3</td>
+      <td>
+        <div class="cluster-name">Gatekeeping & Health</div>
+        <div class="cluster-desc">Peterson, Elon, Fuentes as controlled opposition; fluorescent lights, vaccines, beta male production.</div>
+      </td>
+      <td class="num">76</td>
+      <td class="num">18.2</td>
+    </tr>
+    <tr>
+      <td class="rank">#4</td>
+      <td>
+        <div class="cluster-name">Substack Meta & Platform</div>
+        <div class="cluster-desc">Substack as arena — edgelords, blocking culture, women using looks for subscribers, ChatGPT detection.</div>
+      </td>
+      <td class="num">113</td>
+      <td class="num">17.6</td>
+    </tr>
+    <tr>
+      <td class="rank">#5</td>
+      <td>
+        <div class="cluster-name">Race & America</div>
+        <div class="cluster-desc">White civilizational decline, immigration, South Africa, the Soviet Union as cautionary tale.</div>
+      </td>
+      <td class="num">133</td>
+      <td class="num">16.8</td>
+    </tr>
+    <tr>
+      <td class="rank">#6</td>
+      <td>
+        <div class="cluster-name">Geopolitics & Power</div>
+        <div class="cluster-desc">Trump, Epstein, Iran, intelligence agencies, MLK files — the machinery of political power.</div>
+      </td>
+      <td class="num">108</td>
+      <td class="num">15.9</td>
+    </tr>
+    <tr>
+      <td class="rank">#7</td>
+      <td>
+        <div class="cluster-name">Red Pill / Normie Critique</div>
+        <div class="cluster-desc">Normies as epistemological category, psyops, the red pill as threshold rather than argument.</div>
+      </td>
+      <td class="num">89</td>
+      <td class="num">14.3</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="page-break"></div>
+<p class="section-title">Top Notes by Cluster</p>
+
+<div class="cluster-block">
+  <div class="cluster-header">
+    <h2>Women, Class & Liberals</h2>
+    <div class="ch-meta">222 notes &nbsp;·&nbsp; avg 21.4 reactions</div>
+    <div class="ch-terms">women · class · liberal · white · men · middle · middle class · never</div>
+  </div>
+  <div class="note">
+    <div class="note-num">#1</div>
+    <div class="note-inner">
+      <div class="note-meta"><strong>❤ 202</strong>&nbsp;&nbsp;🔁 25 &nbsp;·&nbsp; 2026-04-26 &nbsp;·&nbsp; p=0.62</div>
+      <div class="note-body">Casual sex is unironically a huge part of why so many women have become politically radicalized. 
+
+If you ask a random woman why she hates men, 95% chance it boils down to sexual grievance, accumulated from embarrassing experiences. In other words, women are the real incels.
+
+I witnessed this myself in university: one too many bad situationships, and women begin to carry this feeling of being a piece of meat everywhere, projecting it onto "societ…</div>
+      <a class="note-link" href="https://substack.com/profile/273636371-glo/note/c-249221280">https://substack.com/profile/273636371-glo/note/c-249221280</a>
+    </div>
+  </div>
+  <div class="note">
+    <div class="note-num">#2</div>
+    <div class="note-inner">
+      <div class="note-meta"><strong>❤ 90</strong>&nbsp;&nbsp;🔁 4 &nbsp;·&nbsp; 2024-11-01 &nbsp;·&nbsp; p=0.51</div>
+      <div class="note-body">What conservatives don't understand about liberals is that they are not crazy.
+
+They are on Prozac.
+
+And the same way a greasy burger tastes good while drunk.
+
+A bumbling Biden and a cackling Kamala sounds good on Prozac.
+
+People on Prozac have dark soulless eyes. They experience reality differently. They live in a hollow shadow world of echos.
+
+And they are located in the Politics recommended tab on Substack.</div>
+      <a class="note-link" href="https://substack.com/profile/273636371-glo/note/c-74970164">https://substack.com/profile/273636371-glo/note/c-74970164</a>
+    </div>
+  </div>
+  <div class="note">
+    <div class="note-num">#3</div>
+    <div class="note-inner">
+      <div class="note-meta"><strong>❤ 87</strong>&nbsp;&nbsp;🔁 8 &nbsp;·&nbsp; 2024-12-27 &nbsp;·&nbsp; p=0.54</div>
+      <div class="note-body">Before the smartphone women went to the beach to meet men not post selfie. Women's used to actively enjoy cold approached because it was how they got attention. The smartphone completely destroyed the female attention economy, the same way pornography destroyed the male dopamine signaling system.</div>
+      <a class="note-link" href="https://substack.com/profile/273636371-glo/note/c-83305644">https://substack.com/profile/273636371-glo/note/c-83305644</a>
+    </div>
+  </div>
+  <div class="note">
+    <div class="note-num">#4</div>
+    <div class="note-inner">
+      <div class="note-meta"><strong>❤ 64</strong>&nbsp;&nbsp;🔁 6 &nbsp;·&nbsp; 2024-12-12 &nbsp;·&nbsp; p=0.8</div>
+      <div class="note-body">Liberals are incapable of love because love is a radical exclusionary act in which one person is elevated above all else. Love is discrimination.
+
+Liberals want nothing more than to reduce sex into a beurocractic procedure. Thats why they love affirmative consent so much, it's beurocracy.
+
+This woman reduced her Vagina to a DMV counter where people take a ticket and line up for their turn.
+
+Why? Because liberalism reduces all transcendent sacred …</div>
+      <a class="note-link" href="https://substack.com/profile/273636371-glo/note/c-81202581">https://substack.com/profile/273636371-glo/note/c-81202581</a>
+    </div>
+  </div>
+  <div class="note">
+    <div class="note-num">#5</div>
+    <div class="note-inner">
+      <div class="note-meta"><strong>❤ 57</strong>&nbsp;&nbsp;🔁 7 &nbsp;·&nbsp; 2024-12-01 &nbsp;·&nbsp; p=0.5</div>
+      <div class="note-body">Western Liberal Masculinity is a complete facade. All the celebrities young men look up to are shallow artificial cutouts manufactured by hollywood. 
+
+They have sex with prostitutes and when that fails to provide dopamine they graduate to molesting children.
+
+The glamorous life is a lie and anyone who belives in the mirage is a rĕtard who should be excluded from all intellectual conversations.</div>
+      <a class="note-link" href="https://substack.com/profile/273636371-glo/note/c-79582606">https://substack.com/profile/273636371-glo/note/c-79582606</a>
+    </div>
+  </div>
+</div>
+
+<div class="cluster-block">
+  <div class="cluster-header">
+    <h2>Social Order & Masculinity</h2>
+    <div class="ch-meta">82 notes &nbsp;·&nbsp; avg 20.0 reactions</div>
+    <div class="ch-terms">social · man · life · world · media · way · real · order</div>
+  </div>
+  <div class="note">
+    <div class="note-num">#1</div>
+    <div class="note-inner">
+      <div class="note-meta"><strong>❤ 104</strong>&nbsp;&nbsp;🔁 7 &nbsp;·&nbsp; 2025-12-25 &nbsp;·&nbsp; p=0.84</div>
+      <div class="note-body">Here's a simple visual for you. Go take out five quarters and stack them. That's $1.25. That was US minimum wage in 1967. 
+
+So if you were a newspaper boy riding around on your bike, throwing newspapers at houses for four hours, you made $9 a day. Assuming you work 260 days a year, that's $1,300 annual. Not bad for a kid in 1967.
+
+At that time, a US quarter was made with 90% silver. Five quarters equals roughly one ounce of silver. An ounce of si…</div>
+      <a class="note-link" href="https://substack.com/profile/273636371-glo/note/c-191639139">https://substack.com/profile/273636371-glo/note/c-191639139</a>
+    </div>
+  </div>
+  <div class="note">
+    <div class="note-num">#2</div>
+    <div class="note-inner">
+      <div class="note-meta"><strong>❤ 84</strong>&nbsp;&nbsp;🔁 10 &nbsp;·&nbsp; 2026-04-21 &nbsp;·&nbsp; p=0.61</div>
+      <div class="note-body">In 2009, the government took 690,000 perfectly good cars and destroyed them on purpose.
+
+Not recycled. Not resold. Wrecked beyond repair. Dealers were forced to pour sodium silicate straight into the engines so they’d seize up and never run again. Cars that a single mom could have bought for $3,000 got turned into scrap metal because Washington decided they knew better.
+
+They called it Cash for Clunkers. $3 billion of your money. Sold to you as s…</div>
+      <a class="note-link" href="https://substack.com/profile/273636371-glo/note/c-246863082">https://substack.com/profile/273636371-glo/note/c-246863082</a>
+    </div>
+  </div>
+  <div class="note">
+    <div class="note-num">#3</div>
+    <div class="note-inner">
+      <div class="note-meta"><strong>❤ 76</strong>&nbsp;&nbsp;🔁 5 &nbsp;·&nbsp; 2025-04-13 &nbsp;·&nbsp; p=0.94</div>
+      <div class="note-body">There is no difference between inflationary money printing, vote stuffing, and affirmative action. 
+
+Your government hates you and devalues your labour by printing fake labor tokens. Whether that token is a dollar a vote or a point on the SAT makes no difference.
+
+ Your work which is to say your time and your life is being willfully and consciously devalued. To think these people want what's best for you is pure delusion.</div>
+      <a class="note-link" href="https://substack.com/profile/273636371-glo/note/c-108319226">https://substack.com/profile/273636371-glo/note/c-108319226</a>
+    </div>
+  </div>
+  <div class="note">
+    <div class="note-num">#4</div>
+    <div class="note-inner">
+      <div class="note-meta"><strong>❤ 75</strong>&nbsp;&nbsp;🔁 9 &nbsp;·&nbsp; 2025-01-10 &nbsp;·&nbsp; p=0.42</div>
+      <div class="note-body">These people have absoluty no remorse at being too incompetent to do their job. They just want that steady government pay and if your house burns down or you die in a fire that's on you.
+
+Everyone in Los Angeles openly supported Affirmative Action and destroyed the careers of anyone who dared speak up.
+
+Now they can all breath asbestos on top of being clot shot vaxxed. I can garentee that no one will take responsibility. There will be no accounta…</div>
+      <a class="note-link" href="https://substack.com/profile/273636371-glo/note/c-85390657">https://substack.com/profile/273636371-glo/note/c-85390657</a>
+    </div>
+  </div>
+  <div class="note">
+    <div class="note-num">#5</div>
+    <div class="note-inner">
+      <div class="note-meta"><strong>❤ 56</strong>&nbsp;&nbsp;🔁 6 &nbsp;·&nbsp; 2026-04-05 &nbsp;·&nbsp; p=0.64</div>
+      <div class="note-body">People liked women a lot more as people before they started publicly posting their beliefs and lifestyles. In the pre-corporate, pre-women's internet era of the 1990s and 2000s, we had no idea what women were really like at scale.
+
+It was still possible to think, "I may not like the HR lady, but I'm sure she has some positive qualities I don't know about that make her a worthy person."
+
+Today you can easily stalk this bitch's Instagram and Twitte…</div>
+      <a class="note-link" href="https://substack.com/profile/273636371-glo/note/c-238717513">https://substack.com/profile/273636371-glo/note/c-238717513</a>
+    </div>
+  </div>
+</div>
+
+<div class="cluster-block">
+  <div class="cluster-header">
+    <h2>Gatekeeping & Health</h2>
+    <div class="ch-meta">76 notes &nbsp;·&nbsp; avg 18.2 reactions</div>
+    <div class="ch-terms">peterson · brain · beta · fed · male · jordan · anti · elon</div>
+  </div>
+  <div class="note">
+    <div class="note-num">#1</div>
+    <div class="note-inner">
+      <div class="note-meta"><strong>❤ 73</strong>&nbsp;&nbsp;🔁 11 &nbsp;·&nbsp; 2025-11-16 &nbsp;·&nbsp; p=0.59</div>
+      <div class="note-body">We need to have a serious conversation about lighting. 
+
+Florescent lights flash at micro intervals causing headaches and brain damage.
+
+Normie Proles are doomed to work under walmart seizure lights. 
+
+Anyone who puts up Florescent lights is a light rapist, the same way that anyone who cooks with Canola Oil is metabolism rapist.</div>
+      <a class="note-link" href="https://substack.com/profile/273636371-glo/note/c-177875336">https://substack.com/profile/273636371-glo/note/c-177875336</a>
+    </div>
+  </div>
+  <div class="note">
+    <div class="note-num">#2</div>
+    <div class="note-inner">
+      <div class="note-meta"><strong>❤ 62</strong>&nbsp;&nbsp;🔁 6 &nbsp;·&nbsp; 2025-12-24 &nbsp;·&nbsp; p=0.51</div>
+      <div class="note-body">White people claim to love Fight Club, yet they turn around and shit talk Waffle House.
+
+If any establishment embodies the life-affirming Dionysian spirit, it's Waffle House. There's so much bourgeois Jordan Peterson-style Nietzsche larping, but when it comes time to actually throw a chair at Waffle House, suddenly it's too much.
+
+Waffle House is an opportunity to transcend the Patagonia vest, the Excel spreadsheets, and reconnect with authentic …</div>
+      <a class="note-link" href="https://substack.com/profile/273636371-glo/note/c-191343068">https://substack.com/profile/273636371-glo/note/c-191343068</a>
+    </div>
+  </div>
+  <div class="note">
+    <div class="note-num">#3</div>
+    <div class="note-inner">
+      <div class="note-meta"><strong>❤ 53</strong>&nbsp;&nbsp;🔁 8 &nbsp;·&nbsp; 2024-12-02 &nbsp;·&nbsp; p=0.79</div>
+      <div class="note-body">The Destiny Nick Fuentes leak gives me an excuse to repost this brilliant masterpiece</div>
+      <a class="note-link" href="https://substack.com/profile/273636371-glo/note/c-79757178">https://substack.com/profile/273636371-glo/note/c-79757178</a>
+    </div>
+  </div>
+  <div class="note">
+    <div class="note-num">#4</div>
+    <div class="note-inner">
+      <div class="note-meta"><strong>❤ 41</strong>&nbsp;&nbsp;🔁 3 &nbsp;·&nbsp; 2026-01-15 &nbsp;·&nbsp; p=0.73</div>
+      <div class="note-body">Peterson yelled “Get The Damn Vaccine!” and insisted that every beta male who attends his talks be vaccinated. Now that all the cattle are already vaccinated, hes yelling against it. Why? Because today its perfectly safe to do so.
+
+Also notice he wrapped himself in religious iconography for whatever reason.
+
+These people are duplicitous traitors and you should stay as far away as possible.</div>
+      <a class="note-link" href="https://substack.com/profile/273636371-glo/note/c-200210157">https://substack.com/profile/273636371-glo/note/c-200210157</a>
+    </div>
+  </div>
+  <div class="note">
+    <div class="note-num">#5</div>
+    <div class="note-inner">
+      <div class="note-meta"><strong>❤ 41</strong>&nbsp;&nbsp;🔁 2 &nbsp;·&nbsp; 2025-04-02 &nbsp;·&nbsp; p=0.54</div>
+      <div class="note-body">There's a point in your internet radicalization that you become so nitch that your completely unrelatable to anyone and impossibly isolated.
+
+That's why you need to keep pushing.
+
+If you keep pushing far enough you can become a priest, a politician, or philosopher. Suddenly your crazy ideas are cool and hip an your mainstream again.
+
+What im saying is don't stop at normie Jordan Peterson Conservatardism keep pushing until your an esoteric health …</div>
+      <a class="note-link" href="https://substack.com/profile/273636371-glo/note/c-105442561">https://substack.com/profile/273636371-glo/note/c-105442561</a>
+    </div>
+  </div>
+</div>
+
+<div class="cluster-block">
+  <div class="cluster-header">
+    <h2>Substack Meta & Platform</h2>
+    <div class="ch-meta">113 notes &nbsp;·&nbsp; avg 17.6 reactions</div>
+    <div class="ch-terms">substack · book · read · lot · way · talking · https · guys</div>
+  </div>
+  <div class="note">
+    <div class="note-num">#1</div>
+    <div class="note-inner">
+      <div class="note-meta"><strong>❤ 107</strong>&nbsp;&nbsp;🔁 15 &nbsp;·&nbsp; 2025-12-22 &nbsp;·&nbsp; p=0.44</div>
+      <div class="note-body">Next time you're stuck in a long, condescending argument with a Substack edgelord, take a step back and remember: unlike your family, this guy actually listens to you.
+
+The man calling you a homo took the time to understand your worldview, so he can zero in on the exact type of homo you are.
+
+That's something your family will never do they're too busy watching sportsball.
+
+No matter what type of edgelord he is, remember we're in this together. Un…</div>
+      <a class="note-link" href="https://substack.com/profile/273636371-glo/note/c-190698950">https://substack.com/profile/273636371-glo/note/c-190698950</a>
+    </div>
+  </div>
+  <div class="note">
+    <div class="note-num">#2</div>
+    <div class="note-inner">
+      <div class="note-meta"><strong>❤ 78</strong>&nbsp;&nbsp;🔁 2 &nbsp;·&nbsp; 2025-05-19 &nbsp;·&nbsp; p=0.45</div>
+      <div class="note-body">Substack needs a Hardcore mode where you cannot block anyone for any reason. There's too many Normies here blocking conversations the second they get interesting. 
+
+Normies need a badge of shame on their profile demarcating that they cannot handle reading mean words on a screen.
+
+They should basically have to wear a yellow armband with N for Normie on it, so that its clear that they are a second class Substack citizen.</div>
+      <a class="note-link" href="https://substack.com/profile/273636371-glo/note/c-118485862">https://substack.com/profile/273636371-glo/note/c-118485862</a>
+    </div>
+  </div>
+  <div class="note">
+    <div class="note-num">#3</div>
+    <div class="note-inner">
+      <div class="note-meta"><strong>❤ 56</strong>&nbsp;&nbsp;🔁 6 &nbsp;·&nbsp; 2024-12-02 &nbsp;·&nbsp; p=0.63</div>
+      <div class="note-body">Women on substack pretending to be writers but not so secretly using their looks to get subscribers</div>
+      <a class="note-link" href="https://substack.com/profile/273636371-glo/note/c-79649774">https://substack.com/profile/273636371-glo/note/c-79649774</a>
+    </div>
+  </div>
+  <div class="note">
+    <div class="note-num">#4</div>
+    <div class="note-inner">
+      <div class="note-meta"><strong>❤ 50</strong>&nbsp;&nbsp;🔁 2 &nbsp;·&nbsp; 2025-12-17 &nbsp;·&nbsp; p=0.53</div>
+      <div class="note-body">Some obvious ChatGPT patterns i keep seeing across blogs, linkedin posts, Substack articles, even instagram video scripts:
+
+1. using the phrase "no fluff" and "shouting into the void"
+
+2. constant "curious what others think" sign offs that never actually respond to anyone
+
+3. contrast framing everywhere, it is not x, it is y, repeated over and over
+
+4. fragmented, pseudo profound sentences. short. isolated. trying to feel reflective
+
+5. over expl…</div>
+      <a class="note-link" href="https://substack.com/profile/273636371-glo/note/c-188680577">https://substack.com/profile/273636371-glo/note/c-188680577</a>
+    </div>
+  </div>
+  <div class="note">
+    <div class="note-num">#5</div>
+    <div class="note-inner">
+      <div class="note-meta"><strong>❤ 50</strong>&nbsp;&nbsp;🔁 10 &nbsp;·&nbsp; 2025-03-24 &nbsp;·&nbsp; p=0.63</div>
+      <div class="note-body">Nothing interesting will ever happen so long as you surround yourself with Normtards. Substack is a haven for Center Right Normtards. 
+
+Just fat centrists saying generic things to prop up their state manufactured ego identity.
+
+Until you start reading interesting books and talking to crazy people your life will contine to follow the pre approved plan manufactured by the central planners at the Rand Corperation.</div>
+      <a class="note-link" href="https://substack.com/profile/273636371-glo/note/c-103007428">https://substack.com/profile/273636371-glo/note/c-103007428</a>
+    </div>
+  </div>
+</div>
+
+<div class="cluster-block">
+  <div class="cluster-header">
+    <h2>Race & America</h2>
+    <div class="ch-meta">133 notes &nbsp;·&nbsp; avg 16.8 reactions</div>
+    <div class="ch-terms">american · white · states · america · united · united states · european · soviet</div>
+  </div>
+  <div class="note">
+    <div class="note-num">#1</div>
+    <div class="note-inner">
+      <div class="note-meta"><strong>❤ 131</strong>&nbsp;&nbsp;🔁 11 &nbsp;·&nbsp; 2025-01-12 &nbsp;·&nbsp; p=0.62</div>
+      <div class="note-body">White Infrastructure Only Properly Functions When Operated By Whites (and also Asians)
+
+White Infrastructure can only function when operated by Whites, with the notable exception of Asians and off-Whites. The moment Whites began leaving South Africa en mass is the moment power plants stopped working.
+
+ Shortly after Los Angeles got it's first Black Lesbian Fire Chief, it burned down in spectacular flames. The moment the Russian Army left Syria, w…</div>
+      <a class="note-link" href="https://substack.com/profile/273636371-glo/note/c-85830286">https://substack.com/profile/273636371-glo/note/c-85830286</a>
+    </div>
+  </div>
+  <div class="note">
+    <div class="note-num">#2</div>
+    <div class="note-inner">
+      <div class="note-meta"><strong>❤ 68</strong>&nbsp;&nbsp;🔁 3 &nbsp;·&nbsp; 2025-10-30 &nbsp;·&nbsp; p=0.83</div>
+      <div class="note-body">It is illegal to bring a plant across the border because you might upset the natural ecosystem. But, airdropping millions of Africans into Europe will actually benefit Europe because of increased diversity.</div>
+      <a class="note-link" href="https://substack.com/profile/273636371-glo/note/c-171619261">https://substack.com/profile/273636371-glo/note/c-171619261</a>
+    </div>
+  </div>
+  <div class="note">
+    <div class="note-num">#3</div>
+    <div class="note-inner">
+      <div class="note-meta"><strong>❤ 67</strong>&nbsp;&nbsp;🔁 5 &nbsp;·&nbsp; 2025-02-06 &nbsp;·&nbsp; p=0.62</div>
+      <div class="note-body">The United States has very powerful financial incentive structures designed to reduce White American buying power.
+
+The migrants themselves are not the problem. They are 90 IQ have no idea what's going on.
+
+The problem is they are heavily subsidized both at the level of welfare and institutionaly via a plethora of Affirmative Action program.
+
+So while you work for your SAT score theirs is printed via inflationary Affirmative Action. And while you…</div>
+      <a class="note-link" href="https://substack.com/profile/273636371-glo/note/c-91479905">https://substack.com/profile/273636371-glo/note/c-91479905</a>
+    </div>
+  </div>
+  <div class="note">
+    <div class="note-num">#4</div>
+    <div class="note-inner">
+      <div class="note-meta"><strong>❤ 61</strong>&nbsp;&nbsp;🔁 5 &nbsp;·&nbsp; 2026-04-13 &nbsp;·&nbsp; p=0.51</div>
+      <div class="note-body">Let's all pause for a moment to absorb the fact that the Canadian government is not only using tax dollars to put its citizens down like sick animals, but also to pay for BILLBOARDS, to advertise it like it's a luxury vacation choice.
+
+96% of the 100,000 assisted suicide cases in Canada so far have been white Canadians.
+
+Your government wants to kill you as part of the globalist depopulation agenda. You need to leave.</div>
+      <a class="note-link" href="https://substack.com/profile/273636371-glo/note/c-242724732">https://substack.com/profile/273636371-glo/note/c-242724732</a>
+    </div>
+  </div>
+  <div class="note">
+    <div class="note-num">#5</div>
+    <div class="note-inner">
+      <div class="note-meta"><strong>❤ 61</strong>&nbsp;&nbsp;🔁 6 &nbsp;·&nbsp; 2025-01-31 &nbsp;·&nbsp; p=0.73</div>
+      <div class="note-body">The reason the Soviet Union had empty supermarket shelves is because it didn't enter the minds of the Central Committee of the Communist Party of the Soviet Union, to feed the people GoySlop.
+
+If you removed all of the GoySlop, ZogChow and Sloppa from the shelves of American supermarkets and only sold real food, the shelves would be Soviet Union 1980s empty.
+
+Food quality in the United States is so low that Soviet army ration equivalent of Buckwh…</div>
+      <a class="note-link" href="https://substack.com/profile/273636371-glo/note/c-90082354">https://substack.com/profile/273636371-glo/note/c-90082354</a>
+    </div>
+  </div>
+</div>
+
+<div class="cluster-block">
+  <div class="cluster-header">
+    <h2>Geopolitics & Power</h2>
+    <div class="ch-meta">108 notes &nbsp;·&nbsp; avg 15.9 reactions</div>
+    <div class="ch-terms">trump · sex · war · us · epstien · american · iran · now</div>
+  </div>
+  <div class="note">
+    <div class="note-num">#1</div>
+    <div class="note-inner">
+      <div class="note-meta"><strong>❤ 155</strong>&nbsp;&nbsp;🔁 19 &nbsp;·&nbsp; 2025-01-26 &nbsp;·&nbsp; p=0.71</div>
+      <div class="note-body">Trump just released the Martin Luther King files. King was a pervert adulterer, pervert and homosexual.</div>
+      <a class="note-link" href="https://substack.com/profile/273636371-glo/note/c-88679285">https://substack.com/profile/273636371-glo/note/c-88679285</a>
+    </div>
+  </div>
+  <div class="note">
+    <div class="note-num">#2</div>
+    <div class="note-inner">
+      <div class="note-meta"><strong>❤ 74</strong>&nbsp;&nbsp;🔁 6 &nbsp;·&nbsp; 2026-04-26 &nbsp;·&nbsp; p=0.6</div>
+      <div class="note-body">Hindu Americans must all respond to Trump's "India is a hell hole" comment by boycotting America and moving back to Amritkaal in Viksit Bharat.
+
+I beseech all of you to cancel your US citizenships, green cards and green card/citizenship applications and H1B visas and move back. This boycott will cripple the US and bring Trump to its knees.</div>
+      <a class="note-link" href="https://substack.com/profile/273636371-glo/note/c-249459123">https://substack.com/profile/273636371-glo/note/c-249459123</a>
+    </div>
+  </div>
+  <div class="note">
+    <div class="note-num">#3</div>
+    <div class="note-inner">
+      <div class="note-meta"><strong>❤ 61</strong>&nbsp;&nbsp;🔁 5 &nbsp;·&nbsp; 2025-04-06 &nbsp;·&nbsp; p=0.85</div>
+      <div class="note-body">Trump is trying to crash the stock market at least 20%, causing a flight into treasuries, this will cause the fed to slash interest rates so he can refinance the debt to near 0% and cause a deflationary spiral which will lower the cost of everything
+
+He also intends to use tariffs as an incentive for companies to build in the US to avoid having to pay them. The Tariffs and the resulting global trade war will also force American Farmers to sell mo…</div>
+      <a class="note-link" href="https://substack.com/profile/273636371-glo/note/c-106575550">https://substack.com/profile/273636371-glo/note/c-106575550</a>
+    </div>
+  </div>
+  <div class="note">
+    <div class="note-num">#4</div>
+    <div class="note-inner">
+      <div class="note-meta"><strong>❤ 52</strong>&nbsp;&nbsp;🔁 6 &nbsp;·&nbsp; 2026-02-01 &nbsp;·&nbsp; p=0.61</div>
+      <div class="note-body">A core function of Epstien Island, was to rape women get them pregnant and then harvest their fetuses for anti aging stem cells. Thats what the entire operation was all about.
+
+Epstein and what he did goes deep. He did the same stuff Peter Nygard did. There are court documents around Nygard allege he pressured women into becoming pregnant so he could then arrange an abortion to harvest fetal stem cells, blood and bone marrow. Leaked documents all…</div>
+      <a class="note-link" href="https://substack.com/profile/273636371-glo/note/c-208466681">https://substack.com/profile/273636371-glo/note/c-208466681</a>
+    </div>
+  </div>
+  <div class="note">
+    <div class="note-num">#5</div>
+    <div class="note-inner">
+      <div class="note-meta"><strong>❤ 52</strong>&nbsp;&nbsp;🔁 2 &nbsp;·&nbsp; 2024-12-06 &nbsp;·&nbsp; p=0.7</div>
+      <div class="note-body">The reason why the internet is boring and gay is because billions of dollars were spent by intelligence agencies to male it boring and gay.</div>
+      <a class="note-link" href="https://substack.com/profile/273636371-glo/note/c-80322759">https://substack.com/profile/273636371-glo/note/c-80322759</a>
+    </div>
+  </div>
+</div>
+
+<div class="cluster-block">
+  <div class="cluster-header">
+    <h2>Red Pill / Normie Critique</h2>
+    <div class="ch-meta">89 notes &nbsp;·&nbsp; avg 14.3 reactions</div>
+    <div class="ch-terms">normies · red · pill · red pill · fake · normie · thing · cool</div>
+  </div>
+  <div class="note">
+    <div class="note-num">#1</div>
+    <div class="note-inner">
+      <div class="note-meta"><strong>❤ 49</strong>&nbsp;&nbsp;🔁 3 &nbsp;·&nbsp; 2025-03-11 &nbsp;·&nbsp; p=0.79</div>
+      <div class="note-body">By the time a Normie finally realizes they were psyoped they get psyoped into the next psyop.</div>
+      <a class="note-link" href="https://substack.com/profile/273636371-glo/note/c-99779424">https://substack.com/profile/273636371-glo/note/c-99779424</a>
+    </div>
+  </div>
+  <div class="note">
+    <div class="note-num">#2</div>
+    <div class="note-inner">
+      <div class="note-meta"><strong>❤ 44</strong>&nbsp;&nbsp;🔁 5 &nbsp;·&nbsp; 2025-01-16 &nbsp;·&nbsp; p=0.5</div>
+      <div class="note-body">Female behavior on open display on Tinder and Instagram is what radicalized men. The Red Pill Community was just a place for them to talk about their experiences.
+
+The magic of 2013 was seeing nihilism inspiring female behaviors on open display for the first time on Instagram, Snapchat and Tinder and concurrently being called a misogynist for writing about what you saw.
+
+So really what started off as the collapse of Single Family Home Psyop sprea…</div>
+      <a class="note-link" href="https://substack.com/profile/273636371-glo/note/c-86625621">https://substack.com/profile/273636371-glo/note/c-86625621</a>
+    </div>
+  </div>
+  <div class="note">
+    <div class="note-num">#3</div>
+    <div class="note-inner">
+      <div class="note-meta"><strong>❤ 40</strong>&nbsp;&nbsp;🔁 4 &nbsp;·&nbsp; 2025-02-17 &nbsp;·&nbsp; p=0.86</div>
+      <div class="note-body">Quick reminder that the George Floyd riots were astroturfed. Protestors were paid per diem to show up and protest. All your friends who showed solidarity by posting a black square are psyoped normies.</div>
+      <a class="note-link" href="https://substack.com/profile/273636371-glo/note/c-94119744">https://substack.com/profile/273636371-glo/note/c-94119744</a>
+    </div>
+  </div>
+  <div class="note">
+    <div class="note-num">#4</div>
+    <div class="note-inner">
+      <div class="note-meta"><strong>❤ 39</strong>&nbsp;&nbsp;🔁 6 &nbsp;·&nbsp; 2026-02-03 &nbsp;·&nbsp; p=0.59</div>
+      <div class="note-body">Whats going to happen in the next couple of weeks is a bunch of goofs like @DeepLeftAnalysis🔸 are going to cover up in the Heideggerian sense the Epstien child rape and cannibalism in a bunch of mutterings and white noise.
+
+Centrist Rightoids will do the same thing.
+
+Dorky Non Lifting goofs are weak. They are weak mentally and physically weak and when confronted with novel stressful stimulus cover it up, via blathering.
+
+This comment isnt an atta…</div>
+      <a class="note-link" href="https://substack.com/profile/273636371-glo/note/c-209352433">https://substack.com/profile/273636371-glo/note/c-209352433</a>
+    </div>
+  </div>
+  <div class="note">
+    <div class="note-num">#5</div>
+    <div class="note-inner">
+      <div class="note-meta"><strong>❤ 39</strong>&nbsp;&nbsp;🔁 3 &nbsp;·&nbsp; 2024-11-12 &nbsp;·&nbsp; p=0.83</div>
+      <div class="note-body">Quick update on No Nut November. The Democrats are printing fake masterbation coupons. Do not fall for this obvious psyop.</div>
+      <a class="note-link" href="https://substack.com/profile/273636371-glo/note/c-76807867">https://substack.com/profile/273636371-glo/note/c-76807867</a>
+    </div>
+  </div>
+</div>
+
+<div class="page-break"></div>
+<div class="manifesto">
+<h1 class="m-h1">THE PILLARS OF WISDOM: A MANIFESTO</h1>
+<p><em>by GLO</em></p>
+<hr>
+<div class="msection"><h3>I. THE DEMOLITION IS NOT AN ACCIDENT</h3>
+<p>Everything that worked has been systematically replaced by something that doesn't.</p>
+<p>Old-growth wood — centuries old, dense, indestructible — replaced by cultivated fast-growth timber that rots in ten years. This note is not about wood.</p>
+<p>The 1967 quarter was 90% silver. Five of them bought a day's labor. Today's quarter buys nothing because it is nothing — a token issued by people who hate you, to pay you with fake value for real time.</p>
+<p>In 2009 the government took 690,000 working cars and poured sodium silicate into their engines. Not recycled. Destroyed. They called it stimulus.</p>
+<p>They banned raw milk because it might make you sick. They put titanium dioxide in tampons. They replaced tallow with canola oil and called it healthy. They put fluorescent lights in every office, every school, every hospital — lights that flash at micro intervals and cause brain damage — and they called it modern.</p>
+<p>None of this is accidental. There is a word for what's happening. The word is demolition.</p>
+</div>
+<hr>
+<div class="msection"><h3>II. THE BODY DOES NOT LIE</h3>
+<p>Skin mirrors the liver. Posture reflects fascia. Fat distribution follows hormonal state. Jaw structure reflects airway health.</p>
+<p>A 1990s bikini video shows women with normal thyroid function and no signs of xenoestrogen exposure. Vintage softcore content now reads less as sexy and more as a grim archive of what the food supply was before they poisoned it.</p>
+<p>The body is the one honest instrument you have left. When everything around you is manufactured — the news, the currency, the politics, the food — your body still tells the truth. Learn to read it.</p>
+<p>Your skin is your biggest organ. It absorbs what you put on it. Showering in tap water is exposing yourself to a chemical cocktail. Your liver is under siege. Your dopamine system has been hijacked by pornography. Your testosterone is being suppressed by plastics, seed oils, and a medical establishment that profits from your deficiency.</p>
+<p>This is not paranoia. This is biology.</p>
+</div>
+<hr>
+<div class="msection"><h3>III. THE NORMIE IS NOT YOUR ALLY</h3>
+<p>The normie does not believe in conspiracy theories — not because they are untrue, but because the normie does not have the emotional fortitude to accept them.</p>
+<p>The normie forgot Covid happened. The normie forgot the Epstein files. The normie will forget the next thing too, because the normie's primary biological function is to forget.</p>
+<p>By the time a normie finally realizes they were psyoped, they have already been psyoped into the next psyop.</p>
+<p>They will do another fake pandemic. They will release another fake vaccine. The normies will fall for it again. Not because they are stupid — some of them are intelligent — but because compliance is their survival strategy. The normie is socially calibrated to believe whatever reduces friction in their immediate social environment.</p>
+<p>This is why arguing with normies is a waste of your time. You are not going to debate them into consciousness. Consciousness is not a debate. It is a threshold you either cross or you don't.</p>
+<p>Stop trying to convert them. Identify them. Route around them. Protect your information environment from their presence.</p>
+</div>
+<hr>
+<div class="msection"><h3>IV. WHAT THEY DID TO WOMEN</h3>
+<p>Society did not liberate women. It destroyed them and called it liberation.</p>
+<p>Birth control that ruins hormonal health. Tampons laced with carcinogens. Casual sex with men who don't respect them. Plant-based diets devoid of nutrients. Cosmetics with 150 carcinogens. Soul-crushing 9-to-5 jobs. Liberal universities that waste the best and most fertile years of the most capable women on PowerPoint presentations.</p>
+<p>Before the smartphone, women went to the beach to meet men. They actively enjoyed being approached. The smartphone destroyed the female attention economy the same way pornography destroyed male dopamine signaling.</p>
+<p>Women are vulnerable to propaganda because of their innate desire to be sexually attractive. If the media says a political position is the most attractive social signal, most women will adopt it publicly. This is not a flaw. It is a feature of the female psyche that was weaponized against them.</p>
+<p>The women who became politically radicalized — ask any one of them why they hate men. Ninety-five percent of the time it traces back to a sexual grievance. An accumulation of bad situationships, of giving themselves to men who didn't value them, of a market that commodified them and then discarded them.</p>
+<p>Women are victims of the system. They are also, in their current state, its primary enforcers. Both things are true. The solution is not to hate them. The solution is to understand what was done to them — and to refuse to participate in it.</p>
+</div>
+<hr>
+<div class="msection"><h3>V. THE INFRASTRUCTURE PROBLEM</h3>
+<p>There is no difference between inflationary money printing, vote stuffing, and affirmative action.</p>
+<p>They are all the same operation: the devaluation of real labour by the introduction of fake tokens. Whether the fake token is a dollar, a vote, or an SAT point is irrelevant. The mechanism is identical. Your work — which is to say your time, which is to say your life — is being consciously and deliberately devalued by people who benefit from that devaluation.</p>
+<p>The counterfeit civil servant is the clearest illustration. They dress like firefighters. They sit in firehouses. They receive firefighter salaries. But when your house burns down, it's your problem. They supported the policies that put them there. They destroyed the careers of anyone who objected. And when the city burned, they stood and watched.</p>
+<p>This is not incompetence. Incompetence is random. This is a system working exactly as designed.</p>
+</div>
+<hr>
+<div class="msection"><h3>VI. THE CONTROLLED OPPOSITION</h3>
+<p>Jordan Peterson told a generation of young men to clean their rooms and stop blaming society. Turns out society was rigged at every level in every conceivable direction.</p>
+<p>He is not your ally. He is a pressure valve. His function is to redirect your legitimate anger into personal responsibility, so that you fix yourself rather than fix the structure that is breaking you.</p>
+<p>Elon Musk owns the platform where you speak freely and also the platform where the government tells you what to think. This is not a contradiction. This is vertical integration.</p>
+<p>Nick Fuentes exists to make the real conversation seem adjacent to something cartoonish and discrediting. Anyone who takes you to the threshold of real understanding and then stops is not your teacher. They are your ceiling.</p>
+<p>Beware the man who tells you to calm down. The appropriate response to what is happening is not calm.</p>
+</div>
+<hr>
+<div class="msection"><h3>VII. THE ONLY HONEST SPACE</h3>
+<p>The man on Substack who calls you a homo took the time to understand your worldview well enough to identify the exact type of homo you are.</p>
+<p>That is more than your family will ever do. They are too busy watching sportsball.</p>
+<p>This platform is not pure. It is full of women using their faces to buy subscribers, of Christian conservatives who are secretly just progressives with different aesthetics, of edgelords who will block you the second you push back past their comfort zone. Normies need a badge of shame on their profile. They should be identifiable.</p>
+<p>But it is still the only space where the conversation moves toward truth rather than away from it.</p>
+<p>The liberal dream is to expert-manage you from a safe distance. To orbit you from a position of false neutrality. To use decorum as a shield against accountability. Their absolute nightmare is that you close the distance and push back.</p>
+<p>Close the distance. Push back.</p>
+</div>
+<hr>
+<div class="msection"><h3>VIII. WHAT REMAINS</h3>
+<p>The Westboro Baptist Church was right about everything before any of us understood how bad things had gotten.</p>
+<p>The CIA killed nu metal because it was too empowering for young men.</p>
+<p>Dinosaurs definitely could not have reproduced the way the textbooks describe. This is a bigger conspiracy than 9/11.</p>
+<p>Your new year's resolution should not be to work harder. Work is not the answer. The system has been designed to consume your productive energy and return as little as possible. Working harder inside a rigged game makes the game richer.</p>
+<p>The answer is clarity. The answer is a body that works. The answer is people around you who can handle real information without flinching. The answer is refusing to pretend that what you can clearly see is not happening.</p>
+<p>They are counting on your compliance. They are counting on your politeness. They are counting on you deciding it's easier to go along.</p>
+<p>Decide it isn't.</p>
+</div>
+<hr>
+<p><em>GLO · @thepillarsofwisdom</em></p>
+</div>
+</body>
+</html>

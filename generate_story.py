@@ -23,10 +23,14 @@ notes_sample = "\n\n".join(
     for n in top_notes
 )
 
-cluster_summary = "\n".join(
-    f'- {c["name"].upper()} ({c["size"]} notes, avg reactions:{c["avg_reactions"]}): {c["description"]}'
-    for c in clusters
-)
+def cluster_label(c):
+    if "name" in c:
+        return f'{c["name"].upper()} ({c["size"]} notes, avg reactions:{c["avg_reactions"]}): {c["description"]}'
+    else:
+        terms = ", ".join(c.get("top_terms", [])[:6])
+        return f'TOPIC {c["topic"]} ({c["size"]} notes, avg reactions:{c["avg_reactions"]}): top terms: {terms}'
+
+cluster_summary = "\n".join(cluster_label(c) for c in clusters)
 
 PROMPT = f"""You are a cultural analyst. Based on the following data from a Substack author's notes, write a sharp, engaging narrative profile — like something you'd read in a longform magazine piece.
 

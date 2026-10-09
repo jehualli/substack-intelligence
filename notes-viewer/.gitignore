@@ -1,0 +1,5 @@
+node_modules/
+.next/
+data/notes.json
+next-env.d.ts
+.vercel

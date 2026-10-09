@@ -1,0 +1,5 @@
+# Without this file Vercel falls back to .gitignore, which lists data/notes.json
+# and would strip the corpus the app is built around.
+node_modules
+.next
+next-env.d.ts
